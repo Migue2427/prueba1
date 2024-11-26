@@ -1,0 +1,187 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software educativo para la comunidad</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"></link>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="font-roboto bg-gray-100">
+    <header class="bg-blue-600 text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">Software educativo para la comunidad</h1>
+            <div>
+                <button class="bg-white text-blue-600 px-4 py-2 rounded mr-2">Inicio</button>
+                <button class="bg-white text-blue-600 px-4 py-2 rounded" onclick="document.getElementById('registerModal').classList.remove('hidden')">Registrarse</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto mt-8">
+        <section>
+            <h2 class="text-xl font-bold mb-4">Niveles</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="bg-white p-4 rounded shadow">
+                    <h3 class="text-lg font-bold mb-2">Sala Cuna</h3>
+                    <ul>
+                        <li class="mb-2">
+                            <button class="bg-blue-600 text-white px-4 py-2 rounded w-full" onclick="showDetails('musicaSalaCuna')">Música</button>
+                        </li>
+                        <li class="mb-2">
+                            <button class="bg-blue-600 text-white px-4 py-2 rounded w-full" onclick="showDetails('audiolibrosSalaCuna')">Audiolibros</button>
+                        </li>
+                        <li class="mb-2">
+                            <button class="bg-blue-600 text-white px-4 py-2 rounded w-full" onclick="showDetails('cuentosSalaCuna')">Cuentos</button>
+                        </li>
+                        <li class="mb-2">
+                            <button class="bg-blue-600 text-white px-4 py-2 rounded w-full" onclick="showDetails('videosSalaCuna')">Videos</button>
+                        </li>
+                        <li class="mb-2">
+                            <button class="bg-blue-600 text-white px-4 py-2 rounded w-full" onclick="showDetails('materialSalaCuna')">Material para descargar</button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-white p-4 rounded shadow">
+                    <h3 class="text-lg font-bold mb-2">Niveles Medios</h3>
+                    <ul>
+                        <li class="mb-2">
+                            <button class="bg-blue-600 text-white px-4 py-2 rounded w-full" onclick="showDetails('musicaNivelesMedios')">Música</button>
+                        </li>
+                        <li class="mb-2">
+                            <button class="bg-blue-600 text-white px-4 py-2 rounded w-full" onclick="showDetails('audiolibrosNivelesMedios')">Audiolibros</button>
+                        </li>
+                        <li class="mb-2">
+                            <button class="bg-blue-600 text-white px-4 py-2 rounded w-full" onclick="showDetails('cuentosNivelesMedios')">Cuentos</button>
+                        </li>
+                        <li class="mb-2">
+                            <button class="bg-blue-600 text-white px-4 py-2 rounded w-full" onclick="showDetails('videosNivelesMedios')">Videos</button>
+                        </li>
+                        <li class="mb-2">
+                            <button class="bg-blue-600 text-white px-4 py-2 rounded w-full" onclick="showDetails('materialNivelesMedios')">Material para descargar</button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-white p-4 rounded shadow">
+                    <h3 class="text-lg font-bold mb-2">Transición</h3>
+                    <ul>
+                        <li class="mb-2">
+                            <button class="bg-blue-600 text-white px-4 py-2 rounded w-full" onclick="showDetails('musicaTransicion')">Música</button>
+                        </li>
+                        <li class="mb-2">
+                            <button class="bg-blue-600 text-white px-4 py-2 rounded w-full" onclick="showDetails('audiolibrosTransicion')">Audiolibros</button>
+                        </li>
+                        <li class="mb-2">
+                            <button class="bg-blue-600 text-white px-4 py-2 rounded w-full" onclick="showDetails('cuentosTransicion')">Cuentos</button>
+                        </li>
+                        <li class="mb-2">
+                            <button class="bg-blue-600 text-white px-4 py-2 rounded w-full" onclick="showDetails('videosTransicion')">Videos</button>
+                        </li>
+                        <li class="mb-2">
+                            <button class="bg-blue-600 text-white px-4 py-2 rounded w-full" onclick="showDetails('materialTransicion')">Material para descargar</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="details" class="mt-8 hidden">
+            <h2 class="text-xl font-bold mb-4">Detalles</h2>
+            <div id="musicaSalaCuna" class="hidden">
+                <h3 class="text-lg font-bold mb-2">Música - Sala Cuna</h3>
+                <p><a href="https://www.example.com/pepo-baila.mp3" class="text-blue-600 underline">Pepo Baila</a></p>
+            </div>
+            <div id="audiolibrosSalaCuna" class="hidden">
+                <h3 class="text-lg font-bold mb-2">Audiolibros - Sala Cuna</h3>
+                <p>No hay audiolibros disponibles en este momento.</p>
+            </div>
+            <div id="cuentosSalaCuna" class="hidden">
+                <h3 class="text-lg font-bold mb-2">Cuentos - Sala Cuna</h3>
+                <p><a href="https://www.example.com/tres-cerditos.pdf" class="text-blue-600 underline">Los Tres Cerditos</a></p>
+            </div>
+            <div id="videosSalaCuna" class="hidden">
+                <h3 class="text-lg font-bold mb-2">Videos - Sala Cuna</h3>
+                <p>No hay videos disponibles en este momento.</p>
+            </div>
+            <div id="materialSalaCuna" class="hidden">
+                <h3 class="text-lg font-bold mb-2">Material para descargar - Sala Cuna</h3>
+                <p>No hay material disponible en este momento.</p>
+            </div>
+
+            <div id="musicaNivelesMedios" class="hidden">
+                <h3 class="text-lg font-bold mb-2">Música - Niveles Medios</h3>
+                <p>No hay música disponible en este momento.</p>
+            </div>
+            <div id="audiolibrosNivelesMedios" class="hidden">
+                <h3 class="text-lg font-bold mb-2">Audiolibros - Niveles Medios</h3>
+                <p>No hay audiolibros disponibles en este momento.</p>
+            </div>
+            <div id="cuentosNivelesMedios" class="hidden">
+                <h3 class="text-lg font-bold mb-2">Cuentos - Niveles Medios</h3>
+                <p>No hay cuentos disponibles en este momento.</p>
+            </div>
+            <div id="videosNivelesMedios" class="hidden">
+                <h3 class="text-lg font-bold mb-2">Videos - Niveles Medios</h3>
+                <p>No hay videos disponibles en este momento.</p>
+            </div>
+            <div id="materialNivelesMedios" class="hidden">
+                <h3 class="text-lg font-bold mb-2">Material para descargar - Niveles Medios</h3>
+                <p>No hay material disponible en este momento.</p>
+            </div>
+
+            <div id="musicaTransicion" class="hidden">
+                <h3 class="text-lg font-bold mb-2">Música - Transición</h3>
+                <p>No hay música disponible en este momento.</p>
+            </div>
+            <div id="audiolibrosTransicion" class="hidden">
+                <h3 class="text-lg font-bold mb-2">Audiolibros - Transición</h3>
+                <p>No hay audiolibros disponibles en este momento.</p>
+            </div>
+            <div id="cuentosTransicion" class="hidden">
+                <h3 class="text-lg font-bold mb-2">Cuentos - Transición</h3>
+                <p>No hay cuentos disponibles en este momento.</p>
+            </div>
+            <div id="videosTransicion" class="hidden">
+                <h3 class="text-lg font-bold mb-2">Videos - Transición</h3>
+                <p>No hay videos disponibles en este momento.</p>
+            </div>
+            <div id="materialTransicion" class="hidden">
+                <h3 class="text-lg font-bold mb-2">Material para descargar - Transición</h3>
+                <p><a href="https://www.example.com/caligrafia.pdf" class="text-blue-600 underline">Actividades de Caligrafía</a></p>
+            </div>
+        </section>
+    </main>
+
+    <div id="registerModal" class="fixed inset-0 bg-gray-800 bg-opacity-75 flex items-center justify-center hidden">
+        <div class="bg-white p-8 rounded shadow-lg w-1/3">
+            <h2 class="text-xl font-bold mb-4">Registrarse</h2>
+            <form>
+                <div class="mb-4">
+                    <label for="name" class="block text-gray-700">Nombre</label>
+                    <input type="text" id="name" class="w-full px-4 py-2 border rounded" required>
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="block text-gray-700">Correo Electrónico</label>
+                    <input type="email" id="email" class="w-full px-4 py-2 border rounded" required>
+                </div>
+                <div class="mb-4">
+                    <label for="password" class="block text-gray-700">Contraseña</label>
+                    <input type="password" id="password" class="w-full px-4 py-2 border rounded" required>
+                </div>
+                <div class="flex justify-end">
+                    <button type="button" class="bg-gray-600 text-white px-4 py-2 rounded mr-2" onclick="document.getElementById('registerModal').classList.add('hidden')">Cancelar</button>
+                    <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded">Registrarse</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function showDetails(id) {
+            document.querySelectorAll('#details > div').forEach(div => div.classList.add('hidden'));
+            document.getElementById(id).classList.remove('hidden');
+            document.getElementById('details').classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
